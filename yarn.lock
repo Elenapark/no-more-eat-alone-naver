@@ -254,10 +254,26 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/geojson@npm:*":
+  version: 7946.0.10
+  resolution: "@types/geojson@npm:7946.0.10"
+  checksum: 12c407c2dc93ecb26c08af533ee732f1506a9b29456616ba7ba1d525df96206c28ddf44a528f6a5415d7d22893e9d967420940a9c095ee5e539c1eba5fefc1f4
+  languageName: node
+  linkType: hard
+
 "@types/json5@npm:^0.0.29":
   version: 0.0.29
   resolution: "@types/json5@npm:0.0.29"
   checksum: e60b153664572116dfea673c5bda7778dbff150498f44f998e34b5886d8afc47f16799280e4b6e241c0472aef1bc36add771c569c68fc5125fc2ae519a3eb9ac
+  languageName: node
+  linkType: hard
+
+"@types/navermaps@npm:^3.6.3":
+  version: 3.6.3
+  resolution: "@types/navermaps@npm:3.6.3"
+  dependencies:
+    "@types/geojson": "*"
+  checksum: c69409b130e56cf68548d18ca1adcb05825b834fce6332d950b83fb38f61d5f1c206ecc5c9f2a11388c79cbab5c609b22c34dcb3594634923e31d1ed3d25bd96
   languageName: node
   linkType: hard
 
@@ -2641,6 +2657,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "nextjs-project-template@workspace:."
   dependencies:
+    "@types/navermaps": ^3.6.3
     "@types/node": 18.14.1
     "@types/react": 18.0.28
     "@types/react-dom": 18.0.11

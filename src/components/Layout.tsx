@@ -1,11 +1,11 @@
-import React, { ReactNode } from 'react';
+import { ReactNode } from 'react';
 import Header from './Header';
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <main>
+    <>
       <Header />
       {children}
-    </main>
+    </>
   );
 }

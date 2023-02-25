@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@types/navermaps", "npm:3.6.3"],\
             ["@types/node", "npm:18.14.1"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-dom", "npm:18.0.11"],\
@@ -345,11 +346,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["@types/geojson", [\
+        ["npm:7946.0.10", {\
+          "packageLocation": "./.yarn/cache/@types-geojson-npm-7946.0.10-deca8d1263-12c407c2dc.zip/node_modules/@types/geojson/",\
+          "packageDependencies": [\
+            ["@types/geojson", "npm:7946.0.10"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["@types/json5", [\
         ["npm:0.0.29", {\
           "packageLocation": "./.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-e60b153664.zip/node_modules/@types/json5/",\
           "packageDependencies": [\
             ["@types/json5", "npm:0.0.29"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@types/navermaps", [\
+        ["npm:3.6.3", {\
+          "packageLocation": "./.yarn/cache/@types-navermaps-npm-3.6.3-ed44bc34d2-c69409b130.zip/node_modules/@types/navermaps/",\
+          "packageDependencies": [\
+            ["@types/navermaps", "npm:3.6.3"],\
+            ["@types/geojson", "npm:7946.0.10"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3180,6 +3200,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["nextjs-project-template", "workspace:."],\
+            ["@types/navermaps", "npm:3.6.3"],\
             ["@types/node", "npm:18.14.1"],\
             ["@types/react", "npm:18.0.28"],\
             ["@types/react-dom", "npm:18.0.11"],\
