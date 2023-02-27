@@ -37,7 +37,7 @@ export default function Map({
         type="text/javascript"
         onReady={initMap}
       />
-      <div id={mapId} className="w-[100%] h-[100%]" />
+      <div id={mapId} className="w-[100%] h-[100vh]" />
     </>
   );
 }

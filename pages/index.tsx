@@ -1,19 +1,21 @@
-import Map from '@/src/components/Map';
-
-import SampleComponent from '@/src/components/sample-component';
 import { FirebaseAdmin } from '@/src/feature/common/firebase';
 import { FirebaseAuthClient } from '@/src/feature/common/firebase/auth';
 import getConfig from 'next/config';
 import { NextRequest, NextResponse } from 'next/server';
 
+import Map from '@/src/components/Map';
+import useStores from '@/src/feature/common/hooks/useStores';
+
 export default function Home() {
   const firebaseAuth = FirebaseAuthClient.getInstance();
-  const onLoad = (map: naver.maps.Map) => {
-    console.log(map);
-  };
+
+  const {
+    getStores: { isLoading, error, data: sampleStore },
+  } = useStores();
+
   return (
     <main className="w-full h-full">
-      <Map onLoad={onLoad} />
+      <Map />
       {/* markers */}
     </main>
   );
