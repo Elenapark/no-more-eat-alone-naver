@@ -4,19 +4,21 @@ import getConfig from 'next/config';
 import { NextRequest, NextResponse } from 'next/server';
 
 import Map from '@/src/components/Map';
-import useStores from '@/src/feature/common/hooks/useStores';
+import Markers from '@/src/components/Markers';
+import useMap from '@/src/feature/common/hooks/useMap';
 
 export default function Home() {
+  const { initMap } = useMap();
   const firebaseAuth = FirebaseAuthClient.getInstance();
 
-  const {
-    getStores: { isLoading, error, data: sampleStore },
-  } = useStores();
+  const onLoad = (map: NaverMap) => {
+    initMap(map);
+  };
 
   return (
     <main className="w-full h-full">
-      <Map />
-      {/* markers */}
+      <Map onLoad={onLoad} />
+      <Markers />
     </main>
   );
 }

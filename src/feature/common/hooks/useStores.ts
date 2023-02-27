@@ -1,3 +1,5 @@
+import { StoreProps } from './../../../components/types/store';
+
 import useSWR from 'swr';
 import {
   getSampleStoreData,
@@ -5,7 +7,7 @@ import {
 } from '@/src/api/store-api.ts';
 
 export default function useStores() {
-  const getStores = useSWR(cacheKey, getSampleStoreData, {});
+  const getStores = useSWR<StoreProps[]>(cacheKey, getSampleStoreData, {});
 
   return {
     getStores,
